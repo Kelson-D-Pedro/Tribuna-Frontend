@@ -1,0 +1,1 @@
+export { DebateControls } from './DebateControls';

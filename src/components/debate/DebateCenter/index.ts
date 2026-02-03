@@ -1,0 +1,1 @@
+export { DebateCenter } from './DebateCenter';

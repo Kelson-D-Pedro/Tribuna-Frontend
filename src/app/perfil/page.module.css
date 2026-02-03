@@ -1,0 +1,344 @@
+.page {
+  min-height: calc(100vh - var(--nav-height));
+  background-color: var(--color-surface-primary);
+  padding: var(--space-6);
+  padding-bottom: var(--space-12);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Profile Header */
+.profileHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.profileInfo {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.displayName {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-ink-900);
+  margin: 0;
+}
+
+.username {
+  font-size: var(--text-base);
+  color: var(--color-ink-500);
+  margin: 0;
+}
+
+.memberSince {
+  font-size: var(--text-sm);
+  color: var(--color-ink-400);
+  margin: 0;
+}
+
+/* Bio Card */
+.bioCard {
+  margin-bottom: var(--space-6);
+}
+
+.bioHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-900);
+  margin: 0;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: var(--border-thin) solid var(--color-ink-200);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-ink-500);
+}
+
+.editButton:hover {
+  border-color: var(--color-ink-300);
+  color: var(--color-ink-700);
+  background-color: var(--color-surface-secondary);
+}
+
+.bioText {
+  font-size: var(--text-base);
+  color: var(--color-ink-700);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+.bioEdit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bioInput {
+  width: 100%;
+  padding: var(--space-3);
+  background-color: var(--color-surface-secondary);
+  border: var(--border-thin) solid var(--color-ink-200);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-family: var(--font-primary);
+  color: var(--color-ink-900);
+  resize: none;
+  line-height: var(--leading-relaxed);
+}
+
+.bioInput:focus {
+  outline: none;
+  border-color: var(--color-accent-primary);
+}
+
+.bioActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.charCount {
+  font-size: var(--text-sm);
+  color: var(--color-ink-400);
+}
+
+.bioButtons {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* Stats Overview */
+.statsOverview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.overallScoreCard {
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-primary-hover));
+}
+
+.overallScore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.overallScore .scoreValue {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+}
+
+.overallScore .scoreLabel {
+  font-size: var(--text-xs);
+  opacity: 0.9;
+}
+
+.statCard {
+  background-color: var(--color-surface-elevated);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statValue {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-ink-900);
+}
+
+.statLabel {
+  font-size: var(--text-xs);
+  color: var(--color-ink-500);
+}
+
+/* Tabs */
+.tabsContainer {
+  margin-bottom: var(--space-6);
+}
+
+/* Titles Grid */
+.titlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.titleCard {
+  border-left: 4px solid var(--level-color, var(--color-ink-300));
+  background-color: var(--color-surface-elevated);
+}
+
+.titleBadge {
+  display: inline-flex;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: white;
+  margin-bottom: var(--space-2);
+}
+
+.titleDomain {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-900);
+  margin: 0 0 var(--space-1);
+}
+
+.titleEarned {
+  font-size: var(--text-xs);
+  color: var(--color-ink-500);
+  margin: 0;
+}
+
+.titleCardEmpty {
+  border: 2px dashed var(--color-ink-200);
+  background-color: transparent;
+}
+
+.emptyTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  color: var(--color-ink-400);
+}
+
+.emptyTitle span {
+  font-size: var(--text-sm);
+}
+
+/* Criteria List */
+.criteriaList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.criterionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.criterionLabel {
+  width: 120px;
+  font-size: var(--text-sm);
+  color: var(--color-ink-600);
+  flex-shrink: 0;
+}
+
+.criterionBar {
+  flex: 1;
+  height: 12px;
+  background-color: var(--color-surface-secondary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.criterionFill {
+  height: 100%;
+  background-color: var(--color-accent-primary);
+  border-radius: var(--radius-md);
+  transition: width var(--transition-base);
+}
+
+.criterionValue {
+  width: 40px;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-900);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Topics List */
+.topicsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.topicTag {
+  display: inline-flex;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface-secondary);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  color: var(--color-ink-700);
+}
+
+.addTopicButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Quick Actions */
+.quickActions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: var(--border-thin) solid var(--color-ink-100);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: var(--space-4);
+  }
+
+  .profileHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profileInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .statsOverview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quickActions {
+    flex-direction: column;
+  }
+}

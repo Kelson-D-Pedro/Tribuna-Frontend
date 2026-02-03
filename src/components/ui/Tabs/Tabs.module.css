@@ -1,0 +1,71 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tabsList {
+  display: flex;
+  gap: var(--space-1);
+  border-bottom: var(--border-thin) solid var(--color-ink-100);
+  padding-bottom: var(--space-1);
+}
+
+.tabsTrigger {
+  position: relative;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-ink-500);
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.tabsTrigger:hover:not(:disabled) {
+  color: var(--color-ink-700);
+  background-color: var(--color-surface-secondary);
+}
+
+.tabsTrigger:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+.tabsTrigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tabsTrigger.active {
+  color: var(--color-ink-900);
+}
+
+.tabsTrigger.active::after {
+  content: '';
+  position: absolute;
+  bottom: calc(-1 * var(--space-1) - 1px);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-ink-900);
+  border-radius: var(--radius-full);
+}
+
+.tabsContent {
+  padding: var(--space-4) 0;
+  animation: fadeIn var(--transition-fast) ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

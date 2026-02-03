@@ -1,0 +1,119 @@
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-tertiary);
+  color: var(--color-ink-600);
+  font-weight: var(--font-medium);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.xs {
+  width: 24px;
+  height: 24px;
+  font-size: var(--text-xs);
+}
+
+.sm {
+  width: 32px;
+  height: 32px;
+  font-size: var(--text-sm);
+}
+
+.md {
+  width: 40px;
+  height: 40px;
+  font-size: var(--text-base);
+}
+
+.lg {
+  width: 48px;
+  height: 48px;
+  font-size: var(--text-lg);
+}
+
+.xl {
+  width: 64px;
+  height: 64px;
+  font-size: var(--text-xl);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Status Indicator */
+.status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  height: 25%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-surface-elevated);
+}
+
+.status-online {
+  background-color: var(--color-accent-secondary);
+}
+
+.status-speaking {
+  background-color: var(--color-speaking);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.status-idle {
+  background-color: var(--color-accent-warning);
+}
+
+.status-offline {
+  background-color: var(--color-ink-400);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+/* Avatar Group */
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatarGroupItem {
+  margin-left: -8px;
+}
+
+.avatarGroupItem:first-child {
+  margin-left: 0;
+}
+
+.avatarGroupItem .avatar {
+  border: 2px solid var(--color-surface-elevated);
+}
+
+.remaining {
+  background-color: var(--color-ink-200);
+  color: var(--color-ink-700);
+  border: 2px solid var(--color-surface-elevated);
+}

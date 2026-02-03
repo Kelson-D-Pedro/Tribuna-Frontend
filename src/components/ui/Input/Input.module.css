@@ -1,0 +1,143 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-ink-700);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface-elevated);
+  border: var(--border-thin) solid var(--color-ink-200);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.inputWrapper.error {
+  border-color: var(--color-accent-danger);
+}
+
+.inputWrapper.error:focus-within {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Sizes */
+.sm {
+  height: 32px;
+}
+
+.sm .input {
+  font-size: var(--text-sm);
+  padding: var(--space-1) var(--space-3);
+}
+
+.md {
+  height: 40px;
+}
+
+.md .input {
+  font-size: var(--text-base);
+  padding: var(--space-2) var(--space-3);
+}
+
+.lg {
+  height: 48px;
+}
+
+.lg .input {
+  font-size: var(--text-lg);
+  padding: var(--space-3) var(--space-4);
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-ink-900);
+  font-family: var(--font-primary);
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--color-ink-400);
+}
+
+.input:disabled {
+  background-color: var(--color-surface-secondary);
+  color: var(--color-ink-400);
+  cursor: not-allowed;
+}
+
+/* Icons */
+.leftIcon,
+.rightIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink-400);
+  padding: 0 var(--space-3);
+}
+
+.leftIcon svg,
+.rightIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hasLeftIcon .input {
+  padding-left: 0;
+}
+
+.hasRightIcon .input {
+  padding-right: 0;
+}
+
+/* Password Toggle */
+.passwordToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-400);
+  transition: color var(--transition-fast);
+}
+
+.passwordToggle:hover {
+  color: var(--color-ink-600);
+}
+
+.passwordToggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Error & Hint Text */
+.errorText {
+  font-size: var(--text-sm);
+  color: var(--color-accent-danger);
+}
+
+.hintText {
+  font-size: var(--text-sm);
+  color: var(--color-ink-400);
+}

@@ -1,0 +1,173 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--nav-height));
+  background-color: var(--color-surface-primary);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-elevated);
+  border-bottom: var(--border-thin) solid var(--color-ink-100);
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+}
+
+.roomInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.roomBadges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.roomTheme {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-900);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .roomTheme {
+    font-size: var(--text-lg);
+  }
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.audienceToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: none;
+  border: var(--border-thin) solid var(--color-ink-200);
+  border-radius: var(--radius-md);
+  color: var(--color-ink-600);
+  font-size: var(--text-sm);
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.audienceToggle:hover {
+  border-color: var(--color-ink-300);
+  color: var(--color-ink-800);
+}
+
+.audienceToggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Left Sidebar - Timeline */
+.sidebar {
+  display: none;
+  width: 280px;
+  background-color: var(--color-surface-elevated);
+  border-right: var(--border-thin) solid var(--color-ink-100);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sidebar {
+    width: 320px;
+  }
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  overflow-y: auto;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: var(--space-6);
+  }
+}
+
+/* Right Sidebar - Audience */
+.rightSidebar {
+  display: none;
+  width: 280px;
+  background-color: var(--color-surface-elevated);
+  border-left: var(--border-thin) solid var(--color-ink-100);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1280px) {
+  .rightSidebar {
+    display: block;
+  }
+}
+
+/* Mobile slide-in for audience panel */
+.rightSidebar.show {
+  display: block;
+  position: fixed;
+  top: calc(var(--nav-height) + 56px);
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-dropdown);
+  animation: slideIn var(--transition-base) ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1280px) {
+  .rightSidebar.show {
+    position: static;
+    animation: none;
+  }
+}

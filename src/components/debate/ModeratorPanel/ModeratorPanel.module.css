@@ -1,0 +1,319 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-surface-primary);
+}
+
+.header {
+  padding: var(--space-4);
+  border-bottom: var(--border-thin) solid var(--color-ink-100);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-900);
+}
+
+.title svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent-primary);
+}
+
+/* Quick Actions */
+.quickActions {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: var(--border-thin) solid var(--color-ink-100);
+}
+
+.actionButton {
+  flex: 1;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: var(--border-thin) solid var(--color-ink-100);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  font-family: var(--font-primary);
+  color: var(--color-ink-500);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tab:hover {
+  color: var(--color-ink-700);
+  background-color: var(--color-surface-secondary);
+}
+
+.tab.active {
+  color: var(--color-accent-primary);
+  border-bottom-color: var(--color-accent-primary);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--space-1);
+  background-color: var(--color-accent-warning);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  color: white;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4);
+}
+
+/* Debaters Section */
+.debatersSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.debaterCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3);
+  background-color: var(--color-surface-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.debaterInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.debaterDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.debaterName {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-ink-900);
+}
+
+.debaterPosition {
+  font-size: var(--text-xs);
+  color: var(--color-ink-500);
+}
+
+.debaterActions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: var(--border-thin) solid var(--color-ink-200);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.iconButton:hover {
+  background-color: var(--color-surface-tertiary);
+  border-color: var(--color-ink-300);
+}
+
+.iconButton svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-ink-600);
+}
+
+.iconButton.danger:hover {
+  background-color: var(--color-accent-error);
+  border-color: var(--color-accent-error);
+}
+
+.iconButton.danger:hover svg {
+  color: white;
+}
+
+/* Stats Card */
+.statsCard {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--color-surface-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.statsTitle {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-700);
+}
+
+.statsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statLabel {
+  font-size: var(--text-sm);
+  color: var(--color-ink-600);
+}
+
+.statValue {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-900);
+}
+
+/* Questions Section */
+.questionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.questionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.questionGroupTitle {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-ink-700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.questionCard {
+  padding: var(--space-3);
+  background-color: var(--color-surface-secondary);
+  border: var(--border-thin) solid var(--color-ink-100);
+  border-radius: var(--radius-lg);
+}
+
+.questionCard.approved {
+  border-color: var(--color-accent-success);
+  background-color: rgba(34, 197, 94, 0.05);
+}
+
+.questionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.questionAuthor {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-ink-700);
+}
+
+.questionText {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-ink-800);
+  line-height: var(--leading-relaxed);
+}
+
+.questionActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.questionButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border: var(--border-thin) solid var(--color-ink-200);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.questionButton svg {
+  width: 14px;
+  height: 14px;
+}
+
+.questionButton.approve {
+  background-color: transparent;
+  color: var(--color-accent-success);
+  border-color: var(--color-accent-success);
+}
+
+.questionButton.approve:hover {
+  background-color: var(--color-accent-success);
+  color: white;
+}
+
+.questionButton.reject {
+  background-color: transparent;
+  color: var(--color-ink-500);
+}
+
+.questionButton.reject:hover {
+  background-color: var(--color-accent-error);
+  border-color: var(--color-accent-error);
+  color: white;
+}
+
+.emptyState {
+  padding: var(--space-6);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-ink-400);
+}

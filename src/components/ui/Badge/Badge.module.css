@@ -1,0 +1,114 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Sizes */
+.sm {
+  padding: var(--space-1) var(--space-2);
+  font-size: 10px;
+}
+
+.md {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+}
+
+/* Variants */
+.default {
+  background-color: var(--color-surface-tertiary);
+  color: var(--color-ink-600);
+}
+
+.primary {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--color-accent-primary);
+}
+
+.success {
+  background-color: rgba(5, 150, 105, 0.1);
+  color: var(--color-accent-secondary);
+}
+
+.warning {
+  background-color: rgba(217, 119, 6, 0.1);
+  color: var(--color-accent-warning);
+}
+
+.danger {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--color-accent-danger);
+}
+
+.live {
+  background-color: var(--color-live);
+  color: white;
+}
+
+/* Live Indicator */
+.liveIndicator {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: var(--radius-full);
+  animation: livePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Level Badge */
+.levelBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+  font-size: 10px;
+  font-weight: var(--font-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  border-radius: var(--radius-sm);
+}
+
+.level-beginner {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-level-beginner);
+}
+
+.level-intermediate {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--color-level-intermediate);
+}
+
+.level-advanced {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-level-advanced);
+}
+
+/* Type Badge */
+.typeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-ink-500);
+}
+
+.aiIcon {
+  font-size: var(--text-sm);
+}
